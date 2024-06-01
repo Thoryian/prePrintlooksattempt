@@ -1,0 +1,102 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prePrint</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #222;
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            transition: background-color 0.3s ease;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        h1 {
+            color: #fff;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="number"],
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 10px;
+        }
+
+        .button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 4px;
+        }
+
+        .button:hover {
+            background-color: #45a049;
+        }
+
+        .back-button {
+            background-color: #666;
+        }
+
+        .back-button:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Purchase Page</h1>
+        <p>Enter your payment and contact details:</p>
+        <form id="purchase-form">
+            <label for="payment">Select Payment Method:</label><br>
+            <select id="payment" name="payment" onchange="updateLabel()">
+                <option value="BTC">Bitcoin (BTC)</option>
+                <option value="XMR">Monero (XMR)</option>
+            </select><br><br>
+            <label id="replace-me-label"></label><br><br>
+            <label id="wallet-address-label" for="wallet-address">Your Wallet Address:</label><br>
+            <input type="text" id="wallet-address" name="wallet-address"
+                placeholder="Enter your wallet address"><br><br>
+            <label for="shipping-address">Shipping Address:</label><br>
+            <input type="text" id="shipping-address" name="shipping-address"
+                placeholder="Enter your shipping address"><br><br>
+            <label for="contact-info">Contact Information (Phone or Email):</label><br>
+            <input type="text" id="contact-info" name="contact-info"
+                placeholder="Enter your phone number or email"><br><br>
+            <label>Before you submit, make sure you send the XMR or BTC over; otherwise, your product will not be sent. You will get a message on your email or phone for shipping.</label>
+            <label>If any of the info is wrong, you will not be able to change it. Make sure to double-check the info.</label>
+            <button class="button" type="submit">Submit Purchase</button>
+        </form>
+    </div>
+<script src="protogen_keyring.js"></script>
+</body>
+
+</html>

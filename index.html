@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>prePrint</title>
+    <link rel="stylesheet" href="css.css">
+</head>
+
+<body>
+
+    <header>
+        <a href="index.html" style="text-decoration: none; color: inherit;">
+            <h1>prePrint</h1>
+        </a>
+        <div class="search-bar">
+            <input id="searchInput" type="text" placeholder="Search for products...">
+            <button id="searchButton">Search</button>
+        </div>
+    </header>
+
+    <div class="container" id="productContainer">
+        <div class="product-grid">
+            <a href="fennec_fox_ring.html" class="product"> <!-- Modified anchor tag -->
+                <img src="fennec_fox_ring_v2_display_large.webp">
+                <h3>Fennec Fox Ring</h3>
+                <div class="price">2.00$</div>
+            </a>
+            <a href="protogen_keyring.html" class="product"> <!-- Modified anchor tag -->
+                <img src="large_display_e1c32da8-9ff7-4342-be30-4405fd47cd00.webp">
+                <h3>Protogen Keyring</h3>
+                <div class="price">10.00$</div>
+            </a>
+            <a href="low_poly_fox.html" class="product"> <!-- Modified anchor tag -->
+                <img src="fox_display_large.webp">
+                <h3>Low Poly Fox</h3>
+                <div class="price">5.00$</div>
+            </a>
+            <!-- Add more products as needed -->
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 prePrint. All rights reserved.</p>
+    </footer>
+
+    <script>
+        const searchInput = document.getElementById("searchInput");
+        const productContainer = document.getElementById("productContainer");
+        const products = document.querySelectorAll(".product");
+
+        searchInput.addEventListener("input", () => {
+            const searchTerm = searchInput.value.toLowerCase();
+
+            products.forEach(product => {
+                const productName = product.querySelector("h3").innerText.toLowerCase();
+                if (productName.includes(searchTerm)) {
+                    product.style.display = "block";
+                } else {
+                    product.style.display = "none";
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>
