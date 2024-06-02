@@ -1,1 +1,10 @@
-# THIS IS NOT THE REAL PAGES URL LOOK HERE FOR IT [https://gitlab.com/HttpAnimations/preprint](https://gitlab.com/HttpAnimations/preprint) The only this page is a thing is beacuse gitlab pages is the worst thing ever.
+# prePrint
+prePrint is a web page for buying 3D models.
+
+
+# Website
+The website can be found [here](https://httpanimation.github.io/prePrint/)
+
+# Tools
+[USD->XMR](https://www.kraken.com/convert/usd/xmr)
+[USD->BTC](https://www.kraken.com/convert/usd/btc)
