@@ -72,11 +72,12 @@ header h1 {
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 .product {
-    flex: 1 1 calc(33.333% - 20px);
+    flex: 1 1 calc(33.333% - 40px); /* Adjusted to ensure proper spacing */
+    max-width: calc(33.333% - 40px); /* Adjusted to ensure proper spacing */
     background-color: #282c34;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
@@ -130,13 +131,15 @@ footer {
 /* Responsive Design */
 @media (max-width: 1024px) {
     .product {
-        flex: 1 1 calc(50% - 20px);
+        flex: 1 1 calc(50% - 40px); /* Adjusted to ensure proper spacing */
+        max-width: calc(50% - 40px); /* Adjusted to ensure proper spacing */
     }
 }
 
 @media (max-width: 768px) {
     .product {
-        flex: 1 1 100%;
+        flex: 1 1 calc(100% - 40px); /* Adjusted to ensure proper spacing */
+        max-width: calc(100% - 40px); /* Adjusted to ensure proper spacing */
     }
 
     .search-bar input {
