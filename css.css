@@ -5,12 +5,13 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    background-color: #121212;
+    background: url('background.png') no-repeat center center fixed;
+    background-size: cover;
     color: #e0e0e0;
 }
 
 header {
-    background-color: #20232a;
+    background-color: rgba(32, 35, 42, 0.9);
     color: white;
     padding: 20px 30px;
     display: flex;
@@ -18,11 +19,17 @@ header {
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     border-radius: 0 0 15px 15px;
+    transition: background-color 0.3s;
 }
 
 header h1 {
     margin: 0;
     font-size: 24px;
+    transition: color 0.3s;
+}
+
+header h1:hover {
+    color: #61dafb;
 }
 
 .search-bar {
@@ -31,6 +38,7 @@ header h1 {
     background-color: #2c2c2c;
     padding: 5px;
     border-radius: 25px;
+    transition: background-color 0.3s;
 }
 
 .search-bar input {
@@ -41,6 +49,12 @@ header h1 {
     border: none;
     border-radius: 20px 0 0 20px;
     outline: none;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.search-bar input:focus {
+    background-color: #444;
+    color: #ffffff;
 }
 
 .search-bar button {
@@ -49,13 +63,14 @@ header h1 {
     color: #121212;
     border: none;
     cursor: pointer;
-    transition: background-color 0.3s, box-shadow 0.3s;
+    transition: background-color 0.3s, box-shadow 0.3s, transform 0.3s;
     border-radius: 0 20px 20px 0;
 }
 
 .search-bar button:hover {
     background-color: #21a1f1;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transform: scale(1.05);
 }
 
 .container {
@@ -63,9 +78,10 @@ header h1 {
     max-width: 1200px;
     margin: 40px auto;
     padding: 30px;
-    background-color: #20232a;
+    background-color: rgba(32, 35, 42, 0.9);
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
+    transition: background-color 0.3s;
 }
 
 .product-grid {
@@ -76,27 +92,33 @@ header h1 {
 }
 
 .product {
-    flex: 1 1 calc(33.333% - 40px); /* Adjusted to ensure proper spacing */
-    max-width: calc(33.333% - 40px); /* Adjusted to ensure proper spacing */
+    flex: 1 1 calc(33.333% - 40px);
+    max-width: calc(33.333% - 40px);
     background-color: #282c34;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     border-radius: 15px;
     overflow: hidden;
     text-align: center;
     color: #e0e0e0;
-    text-decoration: none; /* Remove underline */
-    transition: transform 0.3s, box-shadow 0.3s;
+    text-decoration: none;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
 }
 
 .product:hover {
     transform: translateY(-10px);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.5);
+    background-color: #333;
 }
 
 .product img {
     width: 100%;
     height: auto;
     border-bottom: 1px solid #333;
+    transition: transform 0.3s;
+}
+
+.product img:hover {
+    transform: scale(1.05);
 }
 
 .product h3 {
@@ -104,6 +126,11 @@ header h1 {
     padding: 15px;
     font-size: 20px;
     background-color: #333;
+    transition: background-color 0.3s;
+}
+
+.product h3:hover {
+    background-color: #444;
 }
 
 .product p {
@@ -119,27 +146,27 @@ header h1 {
 }
 
 footer {
-    background-color: #20232a;
+    background-color: rgba(32, 35, 42, 0.9);
     color: white;
     text-align: center;
     padding: 20px 0;
     margin-top: auto;
     box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.5);
     border-radius: 15px 15px 0 0;
+    transition: background-color 0.3s;
 }
 
-/* Responsive Design */
 @media (max-width: 1024px) {
     .product {
-        flex: 1 1 calc(50% - 40px); /* Adjusted to ensure proper spacing */
-        max-width: calc(50% - 40px); /* Adjusted to ensure proper spacing */
+        flex: 1 1 calc(50% - 40px);
+        max-width: calc(50% - 40px);
     }
 }
 
 @media (max-width: 768px) {
     .product {
-        flex: 1 1 calc(100% - 40px); /* Adjusted to ensure proper spacing */
-        max-width: calc(100% - 40px); /* Adjusted to ensure proper spacing */
+        flex: 1 1 calc(100% - 40px);
+        max-width: calc(100% - 40px);
     }
 
     .search-bar input {
